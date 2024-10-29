@@ -46,7 +46,7 @@ public class Main {
         // Java will not tell us about this in advance
         // THe compiler must run to identify any issues with this input
 
-        System.out.println(input);
+        System.out.println("input from radius" + input);
         // THis is now a checked exception
 
         // We cannot compile the code even if it would not throw the exception
@@ -57,16 +57,16 @@ public class Main {
 
         int [] numArray = {1,2,5,8,11,14};
 
-        System.out.println(numArray[input]); // check input value in the array
+        System.out.println("value at index " + input + " is " + numArray[input]); // check input value in the array
 
         //This block will handle exceptions from the input
 
         try{
-            throw new Exception("THis is a general exception");
+            throw new Exception("This is a general exception");
         }catch(FileNotFoundException e){
             System.out.println("THe file is not found");
         }catch(Exception e){
-            System.out.println(e);
+            System.out.println("Exception print in the catch " + e);
             e.printStackTrace();//THis stack trace is a reference to when and where the event error occured
         }
 
